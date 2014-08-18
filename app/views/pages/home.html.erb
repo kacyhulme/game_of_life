@@ -1,1 +1,39 @@
-home
+<script type='text/x-handlebars' data-template-name='application'>
+  <div class='navbar-navbar'>
+    <img {{bind-attr src='image'}} alt='Graffiti Image' />
+    {{#link-to 'index' }}Home{{/link-to}} |
+    {{#link-to 'about' }}About{{/link-to}} |
+    {{#link-to 'products' }}Products{{/link-to}} |
+    {{#link-to 'games' }}Play the Game{{/link-to}} |
+  </div>
+  <div class='container'>{{outlet}}</div>
+</script>
+
+<script type='text/x-handlebars' data-template-name='index'>
+  <h1> Welcome to The Game of Life! </h1>
+</script>
+
+<script type='text/x-handlebars' data-template-name='about'>
+  <h1> About the Game </h1>
+<p>{{bio}}</p>
+</script>
+
+<script type='text/x-handlebars' data-template-name='products'>
+  <h1> List of Products </h1>
+  <p>We have {{productsCount}} available products</p>
+  <p>The time now is {{time}}</p>
+  <div>
+      {{#each}}
+      {{title}}
+      {{/each}}
+  </div>
+</script>
+    
+<script type='text/x-handlebars' data-template-name='games'>
+  <h1> The Game of Life </h1>
+  <h2>Where will you live?</h2>
+  <h2>What kind of car will you drive?</h2>
+  <h2>What color will it be?</h2>
+  <h2>How many kids will you have?</h2>
+  <h2>In what city will you live?</h2>
+</script>    
