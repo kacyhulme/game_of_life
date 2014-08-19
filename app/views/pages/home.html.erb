@@ -23,12 +23,25 @@
   <p>We have {{productsCount}} available products</p>
   <p>The time now is {{time}}</p>
   <div>
-      {{#each}}
-      {{title}}
-      {{/each}}
+    {{#each}}
+      <ul>
+        <li>ID: {{id}}</li>
+        <li>TITLE: {{title}}</li>
+        <li>PRICE: {{price}}</li>
+        <li>DESCRIPTION: {{description}}</li>
+        <li>ON SALE: {{onSale}}</li>
+        <li>IMAGE: {{image}}</li>
+        <li>{{#link-to 'product' this class='btn btn-success' tagName='button'}}MORE INFO{{/link-to}}</li>
+      </ul>
+    {{/each}}
   </div>
 </script>
     
+<script type='text/x-handlebars' data-template-name='product'>
+  <p>TITLE: {{title}}</p>
+  <p>DESCRIPTION: {{description}}</p>
+</script>
+
 <script type='text/x-handlebars' data-template-name='games'>
   <h1> The Game of Life </h1>
   <h2>Where will you live?</h2>

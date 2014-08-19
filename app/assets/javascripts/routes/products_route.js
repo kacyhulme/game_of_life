@@ -4,4 +4,8 @@ GameOfLife.ProductsRoute = Ember.Route.extend({
   }
 });
 
-
+GameOfLife.ProductRoute = Ember.Route.extend({
+  model: function(params){
+    return GameOfLife.PRODUCTS.findBy('title', params.title);
+  }
+});
