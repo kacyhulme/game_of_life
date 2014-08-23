@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140817195240) do
+ActiveRecord::Schema.define(version: 20140820183648) do
 
   create_table "games", force: true do |t|
     t.datetime "created_at"
@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(version: 20140817195240) do
   create_table "products", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.decimal  "price"
+    t.text     "description"
+    t.boolean  "onSale"
   end
 
 end

@@ -7,4 +7,4 @@
 #= require_self
 #= require game_of_life
 
-window.GameOfLife = Ember.Application.create()
+window.GameOfLife = Ember.Application.create();
