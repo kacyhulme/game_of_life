@@ -21,10 +21,10 @@
 
 <script type='text/x-handlebars' data-template-name='products'>
   <h1> List of Products </h1>
-  <p>We have {{productsCount}} available products</p>
+  <p>We have {{content.length}} available products</p>
   <p>The time now is {{time}}</p>
     <div>
-      {{#each}}
+      {{#each content}}
         <ul>
           <li>TITLE: {{title}}</li>
           <li>{{#link-to 'product' this class='btn btn-success' tagName='button'}}MORE INFO{{/link-to}}</li>
@@ -40,7 +40,7 @@
   <p>DESCRIPTION: {{description}}</p>
   <p>PRICE: {{price}}</p>
   <p>ON SALE: {{onSale}}</p>
-  <p><img {{bind-attr src='image'}} alt='Image' /></p>
+  <p><img {{bind-attr src=imageSrc}} alt='Image' /></p>
 </script>
 
 <script type='text/x-handlebars' data-template-name='games'>
