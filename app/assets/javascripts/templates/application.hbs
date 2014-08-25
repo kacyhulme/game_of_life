@@ -1,0 +1,8 @@
+<div class='navbar-navbar'>
+  <img {{bind-attr src='image'}} alt='Graffiti Image' />
+  {{#link-to 'index' }}Home{{/link-to}} |
+  {{#link-to 'about' }}About{{/link-to}} |
+  {{#link-to 'products' }}Products{{/link-to}} |
+  {{#link-to 'games' }}Play the Game{{/link-to}} |
+</div>
+<div class='container'>{{outlet}}</div>

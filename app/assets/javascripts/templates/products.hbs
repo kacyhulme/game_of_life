@@ -1,0 +1,12 @@
+<h1> List of Products </h1>
+<p>We have {{productsCount}} available products</p>
+<p>The time now is {{time}}</p>
+<div>
+  {{#each}}
+    <ul>
+      <li>TITLE: {{title}}</li>
+      <li>{{#link-to 'product' this class='btn btn-success' tagName='button'}}MORE INFO{{/link-to}}</li>
+    </ul>
+  {{/each}}
+</div>
+<div> {{outlet}} </div>
