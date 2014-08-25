@@ -1,3 +1,5 @@
 App.ProductsController = Ember.ArrayController.extend({
-  productsCount: Ember.computed.alias('length')
+  time: function() {
+    return new Date();
+  }.property()
 });
