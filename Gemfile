@@ -40,7 +40,7 @@ gem 'spring',        group: :development
 
 gem 'ember-rails'
 gem 'ember-source', '1.5'
-gem 'ember-data-source', '1.0.0.beta.8'
+gem 'ember-data-source', '1.0.0.beta.9'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
