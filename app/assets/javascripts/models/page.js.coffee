@@ -1,3 +1,3 @@
 # for more details see: http://emberjs.com/guides/models/defining-models/
 
-GameOfLife.Page = DS.Model.extend()
+App.Page = DS.Model.extend()

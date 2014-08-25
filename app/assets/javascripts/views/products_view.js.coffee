@@ -1,2 +1,2 @@
-GameOfLife.ProductsView = Ember.View.extend
+App.ProductsView = Ember.View.extend
   templateName: 'products'

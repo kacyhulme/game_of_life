@@ -1,2 +1,2 @@
-GameOfLife.ProductController = Ember.ObjectController.extend({
+App.ProductController = Ember.ObjectController.extend({
 });

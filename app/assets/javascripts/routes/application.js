@@ -1,1 +1,1 @@
-GameOfLife.ApplicationRoute = Ember.Route.extend({});
+App.ApplicationRoute = Ember.Route.extend({});

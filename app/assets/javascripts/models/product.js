@@ -1,4 +1,4 @@
-GameOfLife.Product = DS.Model.extend({
+App.Product = DS.Model.extend({
   title: DS.attr('string'),
   description: DS.attr('text'),
   price: DS.attr('number'),
