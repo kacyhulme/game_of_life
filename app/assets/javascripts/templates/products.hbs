@@ -1,12 +1,34 @@
 <h1> List of Products </h1>
-<p>We have {{content.length}} products</p>
-<p>The time now is {{time}}</p>
+<p class="products">We have {{content.length}} products</p>
+<p class="products">The time now is {{time}}</p>
 <div>
   {{#each content}}
     <ul>
-      <li>TITLE: {{title}}</li>
-      <li>{{#link-to 'product' this class='btn btn-success' tagName='button'}}MORE INFO{{/link-to}}</li>
+      <li>Item: {{title}}{{#link-to 'product' this class='btn btn-success' tagName='button'}}Details{{/link-to}}</li>
+      Item on Sale?
+      {{#if onSale}}
+        yes
+      {{else}}
+        no
+      {{/if}}
     </ul>
   {{/each}}
+</div>
+
+<div>Add New Product</div>
+<div>
+  Title: {{textarea valueBinding='title'}}
+  <p>{{title}}</p>
+
+  Description: {{textarea valueBinding='description'}}
+  <p>{{description}}</p>
+
+  Price: {{textarea valueBinding='price'}}
+  <p>{{price}}</p>
+
+  On Sale: {{textarea valueBinding='onsale'}}
+  <p>{{onsale}}</p>
+
+  <button {{action 'createReview'}}>Submit New Product</button>
 </div>
 <div> {{outlet}} </div>

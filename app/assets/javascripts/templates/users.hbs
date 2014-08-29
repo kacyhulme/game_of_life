@@ -1,0 +1,9 @@
+<h1> List of Users </h1>
+<div>
+  {{#each content}}
+    <ul>
+      <li>NAME: {{name}}{{#link-to 'user' this class='btn btn-success' tagName='button'}}Details{{/link-to}}</li>
+    </ul>
+  {{/each}}
+</div>
+<div> {{outlet}} </div>
