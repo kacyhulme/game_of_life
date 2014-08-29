@@ -5,18 +5,26 @@ App.ProductsController = Ember.ArrayController.extend({
   }.property(),
   onSale: Ember.computed.alias('product.onsale'),
 
-  action: {
+  title: '',
+  description: '',
+  price:  '',
+  onsale: '',
+
+  actions: {
     createProduct: function() {
       var product = this.store.createRecord('product', {
-        text: this.get('text'),
-        product: this.get('model'),
-        createdAt: new Date()
+        title: this.get('title'),
+        description: this.get('description'),
+        price: this.get('price'),
+        onsale: this.get('onsale')
       });
       var controller = this;
-      review.save().then(function(review) {
-        controller.set('text', '');
-        controller.get('model.reviews').addObject(review);
-     });
+      product.save().then(function(product) {
+        controller.set('title', '');
+        controller.set('description', '');
+        controller.set('price', '');
+        controller.set('onsale', '');
+      });
     }
   }
 });
