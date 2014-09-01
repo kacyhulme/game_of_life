@@ -1,34 +1,39 @@
 <h1> List of Products </h1>
-<p class="products">We have {{content.length}} products</p>
-<p class="products">The time now is {{time}}</p>
-<div>
-  {{#each content}}
-    <ul>
-      <li>Item: {{title}}{{#link-to 'product' this class='btn btn-success' tagName='button'}}Details{{/link-to}}</li>
-      Item on Sale?
-      {{#if onSale}}
-        yes
-      {{else}}
-        no
-      {{/if}}
-    </ul>
-  {{/each}}
+<div class="sidebar">
+  <p class="products">We have {{content.length}} products</p>
+  <p class="products">The time now is {{time}}</p>
+  <div>
+    {{#each content}}
+      <ul>
+        <li>Item: {{title}}{{#link-to 'product' this class='btn btn-success' tagName='button'}}Details{{/link-to}}</li>
+        Item on Sale?
+        {{#if onSale}}
+          yes
+        {{else}}
+          no
+        {{/if}}
+      </ul>
+    {{/each}}
+  </div>
 </div>
 
-<div>Add New Product</div>
-<div>
-  Title: {{textarea valueBinding='title'}}
-  <p>{{title}}</p>
+<div class="outlet"> {{outlet}} </div>
 
-  Description: {{textarea valueBinding='description'}}
-  <p>{{description}}</p>
+<div class="listing">
+  <h2>Add New Product</h2>
+  <div>
+    Title: {{textarea valueBinding='title'}}
+    <p>{{title}}</p>
 
-  Price: {{textarea valueBinding='price'}}
-  <p>{{price}}</p>
+    Description: {{textarea valueBinding='description'}}
+    <p>{{description}}</p>
 
-  On Sale: {{textarea valueBinding='onsale'}}
-  <p>{{onsale}}</p>
+    Price: {{textarea valueBinding='price'}}
+    <p>{{price}}</p>
 
-  <button {{action 'createProduct'}}>Submit New Product</button>
+    On Sale: {{textarea valueBinding='onsale'}}
+    <p>{{onsale}}</p>
+
+    <button {{action 'createProduct'}}>Submit New Product</button>
+  </div>
 </div>
-<div> {{outlet}} </div>
