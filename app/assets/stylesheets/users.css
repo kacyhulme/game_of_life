@@ -1,0 +1,14 @@
+sidebar {
+  float: left;
+  width: 100%;
+}
+
+div.listing {
+  float:left;
+  width: 200px;
+}
+
+div.outlet {
+  float:left;
+  width:600px;
+}

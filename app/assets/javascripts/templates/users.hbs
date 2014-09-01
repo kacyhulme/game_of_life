@@ -1,9 +1,14 @@
-<h1> List of Users </h1>
-<div>
+<sidebar>
+  <h1> List of Users </h1>
+  <p>There are {{kids.length}} kids</p>
+  <p>There are {{adults.length}} adults</p>
+</sidebar>
+<div class="listing">
   {{#each content}}
     <ul>
       <li>NAME: {{name}}{{#link-to 'user' this class='btn btn-success' tagName='button'}}Details{{/link-to}}</li>
     </ul>
   {{/each}}
 </div>
-<div> {{outlet}} </div>
+
+<div class="outlet"> {{outlet}} </div>
