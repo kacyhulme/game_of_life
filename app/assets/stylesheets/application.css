@@ -18,3 +18,22 @@ img {
   height: 100px;
   width: 100px;
   }
+
+header {
+  width: 100%;
+}
+
+div.listing {
+  float:left;
+  width: 300px;
+}
+
+div.outlet {
+  float:left;
+  width: 300px;
+}
+
+div.addnew {
+float:left;
+  width: 300px;
+}

@@ -1,5 +1,5 @@
 App.ProductsRoute = Ember.Route.extend({
   model: function(){
-    return this.store.findAll('product');
+    return this.store.find('product', { order: 'title' });
   }
 });

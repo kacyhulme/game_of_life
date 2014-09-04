@@ -1,8 +1,9 @@
-<h1> List of Products </h1>
-<div class="sidebar">
+<header>
+  <h1> List of Products </h1>
   <p class="products">We have {{content.length}} products</p>
   <p class="products">The time now is {{time}}</p>
-  <div>
+</header>
+  <div class="listing">
     {{#each content}}
       <ul>
         <li>Item: {{title}}{{#link-to 'product' this class='btn btn-success' tagName='button'}}Details{{/link-to}}</li>
@@ -12,6 +13,12 @@
         {{else}}
           no
         {{/if}}
+        Cost Analysis?
+        {{#if expensive}}
+          expensive item!
+        {{else}}
+          {{#link-to 'products.deals'}} Here are some Deals {{/link-to}}
+        {{/if}}
       </ul>
     {{/each}}
   </div>
@@ -19,7 +26,7 @@
 
 <div class="outlet"> {{outlet}} </div>
 
-<div class="listing">
+<div class="addnew">
   <h2>Add New Product</h2>
   <div>
     Title: {{textarea valueBinding='title'}}

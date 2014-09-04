@@ -1,8 +1,8 @@
-<sidebar>
+<header>
   <h1> List of Users </h1>
   <p>There are {{kids.length}} kids</p>
   <p>There are {{adults.length}} adults</p>
-</sidebar>
+</header>
 <div class="listing">
   {{#each content}}
     <ul>
@@ -12,3 +12,25 @@
 </div>
 
 <div class="outlet"> {{outlet}} </div>
+
+<div class="addnew">
+  <h2>Add New User</h2>
+  <div>
+    Name: {{textarea valueBinding='name'}}
+    <p>{{name}}</p>
+
+    City: {{textarea valueBinding='city'}}
+    <p>{{city}}</p>
+
+    Age: {{textarea valueBinding='age'}}
+    <p>{{age}}</p>
+
+    Gender: {{textarea valueBinding='gender'}}
+    <p>{{gender}}</p>
+
+    Favorite Animal: {{textarea valueBinding='favorite_animal'}}
+    <p>{{favorite_animal}}</p>
+
+    <button {{action 'createUser'}}>Submit New User</button>
+  </div>
+</div>

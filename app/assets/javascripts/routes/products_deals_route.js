@@ -1,0 +1,7 @@
+App.ProductsDealsRoute = Ember.Route.extend({
+  model: function(){
+    return this.modelFor('products').filter(function(product){
+      return product.get('price') < 200;
+      });
+    }
+});

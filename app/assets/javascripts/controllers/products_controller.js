@@ -5,6 +5,12 @@ App.ProductsController = Ember.ArrayController.extend({
   }.property(),
   onSale: Ember.computed.alias('product.onsale'),
 
+  expensive: function() {
+    return this.filter(function(product){
+      return product.get('price') < 200;
+    });
+  }.property(),
+
   title: '',
   description: '',
   price:  '',
@@ -26,5 +32,7 @@ App.ProductsController = Ember.ArrayController.extend({
         controller.set('onsale', '');
       });
     }
-  }
+  },
+  // can sort here for client side sorting vs server side
+  // sortProperties: ['title']
 });

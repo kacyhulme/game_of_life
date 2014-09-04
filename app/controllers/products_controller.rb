@@ -6,6 +6,9 @@ class ProductsController < ApplicationController
     respond_with @products
   end
 
+  def show
+  end
+
   def create
     @product = Product.create(product_params)
     respond_with @product
