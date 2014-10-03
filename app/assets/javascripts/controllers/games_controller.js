@@ -14,7 +14,9 @@ App.GamesController = Ember.ObjectController.extend({
 
   selectWinningCity: function(allChosenCities){
     this.get('allChosenCities').forEach(function(e) {
-      console.log(e.value);
+      if (e.value == "Hong Kong"){
+        alert("Your future home is in " + (e.value));
+      }
     });
   }
 });
