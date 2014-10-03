@@ -14,10 +14,21 @@
  *= require_tree .
  */
 
+.navbar-navbar {
+ float: left;
+ height: 200px;
+ width: 200px;
+}
+
 img {
-  height: 100px;
-  width: 100px;
+  float: left;
+  height: 200px;
+  width: 200px;
   }
+
+.container{
+  float: left;
+}
 
 header {
   width: 100%;
