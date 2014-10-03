@@ -1,43 +1,13 @@
-<h1> The Game of Life </h1>
-<h2>What kind of house will you live in?</h2>
-<p>Choose 5, one must be something you DO NOT want</p>
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<h2>What kind of love life will you have?</h2>
-<p>Choose 5, one must be something you DO NOT want</p>
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<h2>What kind of car will you drive?</h2>
-<p>Choose 5, one must be something you DO NOT want</p>
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<h2>What color will it be?</h2>
-<p>Choose 5, one must be something you DO NOT want</p>
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<h2>How many kids will you have?</h2>
-<p>Choose 5, one must be something you DO NOT want</p>
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<h2>In what city will you live?</h2>
-<p>Choose 5, one must be something you DO NOT want</p>
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
-<input type="text">
+<div class="main">
+  <div class="questions">
+    <h1> The Game of Life </h1>
+    <h2>What city do you want to live in?</h2>
+    <p>Choose 5</p>
+    {{#each cities}}
+      {{input value=value}}
+      <p>{{value}}</p>
+    {{/each}}
+  </div>
+</div>
+<button {{action 'selectWinningCity'}}> Click Here for Your New Life! </button>
+</div>

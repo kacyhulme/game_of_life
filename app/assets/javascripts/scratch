@@ -1,0 +1,25 @@
+App.GamesController = Ember.ObjectController.extend({
+  allCategoryItems: [],
+  populateCategoryItems: function(){
+    for (i = 0; i < 5; i++) {
+      var house = App.CategoryItem.create({
+        type: "house",
+        value: ""
+      });
+      this.get('allCategoryItems').pushObject(house)
+    }
+  }.on("init"),
+
+  houses: Ember.computed.filterBy('allCategoryItems', 'type', 'house'),
+  calculateGame: function(allCategoryItems){
+    this.get('allCategoryItems').forEach(function(e) {
+      console.log(e.type);
+    });
+  }
+});
+App.CategoryItem = Ember.Object.extend({
+  type: null
+});
+
+//////////
+

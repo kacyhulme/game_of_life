@@ -7,4 +7,6 @@
 #= require_self
 #= require game_of_life
 
-window.App = Ember.Application.create();
+window.App = Ember.Application.create({
+  LOG_TRANSITIONS: true
+});

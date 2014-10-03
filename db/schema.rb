@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20140828155523) do
 
   create_table "users", force: true do |t|
     t.string   "name"
-    t.string   "city"
+N    t.string   "city"
     t.integer  "age"
     t.boolean  "male"
     t.boolean  "female"
