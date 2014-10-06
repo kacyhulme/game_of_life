@@ -5,11 +5,15 @@ App.ProductsController = Ember.ArrayController.extend({
   }.property(),
   onSale: Ember.computed.alias('product.onsale'),
 
-  expensive: function() {
+  expensiveLabel: function() {
     return this.filter(function(product){
-      return product.get('price') < 200;
+      return product.get('price') > 3500;
     });
+    return product.price;
   }.property(),
+
+
+
 
   title: '',
   description: '',

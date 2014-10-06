@@ -1,27 +1,26 @@
 <header>
   <h1> List of Products </h1>
   <p class="products">We have {{content.length}} products</p>
+  <p>{{#each expensiveLabel}}
+    The following products are expensive: {{title}}
+  {{/each}}</p>
+  <p>{{#link-to 'products.deals'}} Here are some Deals {{/link-to}}</p>
   <p class="products">The time now is {{time}}</p>
 </header>
-  <div class="listing">
-    {{#each content}}
-      <ul>
-        <li>Item: {{title}}{{#link-to 'product' this class='btn btn-success' tagName='button'}}Details{{/link-to}}</li>
-        Item on Sale?
-        {{#if onSale}}
-          yes
-        {{else}}
-          no
-        {{/if}}
-        Cost Analysis?
-        {{#if expensive}}
-          expensive item!
-        {{else}}
-          {{#link-to 'products.deals'}} Here are some Deals {{/link-to}}
-        {{/if}}
-      </ul>
-    {{/each}}
-  </div>
+<div class="listing">
+  {{#each content}}
+    <ul>
+      <li>Item: {{title}}{{#link-to 'product' this class='btn btn-success' tagName='button'}}Details{{/link-to}}</li>
+      <p>${{price}}
+        <p>Item on Sale?
+          {{#if onSale}}
+            yes
+          {{else}}
+            no
+          {{/if}}</p>
+    </ul>
+  {{/each}}
+</div>
 </div>
 
 <div class="outlet"> {{outlet}} </div>
