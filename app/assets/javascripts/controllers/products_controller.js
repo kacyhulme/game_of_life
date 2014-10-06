@@ -12,9 +12,6 @@ App.ProductsController = Ember.ArrayController.extend({
     return product.price;
   }.property(),
 
-
-
-
   title: '',
   description: '',
   price:  '',
