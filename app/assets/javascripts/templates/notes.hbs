@@ -1,0 +1,20 @@
+<h2>Notes</h2>
+<div>
+  {{input value=title}}
+</div>
+<div>
+  {{input value=description}}
+</div>
+<div>
+  <button {{action 'createNewNote' }}>Create New Note</button>
+</div>
+
+<div>
+  {{#each note in content}}
+    <p>Title: {{note.title}}</p>
+    <p>Description: {{note.description}}</p>
+    <div>
+      <button {{action 'deleteNote' note}}>Delete Note</button>
+    </div>
+  {{/each}}
+</div>
