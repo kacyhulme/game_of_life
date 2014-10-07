@@ -9,4 +9,7 @@ App.Router.map (function() {
   this.resource('users', function() {
     this.resource('user', { path: '/:user_id'});
   });
+  this.resource('notes', function() {
+    this.resource('note', { path: '/:note_id'});
+  });
 });

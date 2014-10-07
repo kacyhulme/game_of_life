@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :notes
+
   resources :products
   resources :pages
   resources :games

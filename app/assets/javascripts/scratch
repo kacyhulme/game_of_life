@@ -23,3 +23,35 @@ App.CategoryItem = Ember.Object.extend({
 
 //////////
 
+App.NotesController = Ember.ObjectController.extend({
+  title: '',
+  description: '',
+
+  actions: {
+    createNewNote: function() {
+      var title = this.get('title');
+      var description = this.get('description');
+      var unique = title != null && title.length > 1;
+
+      content.forEach(function(note) {
+        if (title === note.get('title')) {
+          unique = false; return;
+        }
+      });
+      if (unique) {
+        var newNote = this.store.createRecord('note', {
+          title: this.get('title'),
+          description: this.get('description')
+        });
+
+        var controller = this;
+        newNote.save().then(function(newNote) {
+          controller.set('title', '');
+          controller.set('description', '');
+        });
+      } else {
+        alert('Note must have a unique name of at least 2 characters');
+      }
+    }
+  }
+});
