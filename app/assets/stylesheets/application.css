@@ -15,16 +15,16 @@
  */
 
 .navbar-navbar {
- float: left;
- height: 200px;
- width: 200px;
+  float: left;
 }
 
 img {
   float: left;
-  height: 200px;
+  height: 75px;
   width: 200px;
-  }
+  overflow: hidden;
+  margin-right: 15px;
+}
 
 .container{
   float: left;
@@ -45,6 +45,6 @@ div.outlet {
 }
 
 div.addnew {
-float:left;
+  float:left;
   width: 300px;
 }

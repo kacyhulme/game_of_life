@@ -18,7 +18,7 @@ App.GamesController = Ember.ObjectController.extend({
     for (i = 0; i < length; i++){
       var answer = cities[Math.floor(Math.random()*cities.length)];
     }
-      alert("Your future home is in "+ (answer.value));
+      alert("Your future home is in " + (answer.value));
   }
 
 });
